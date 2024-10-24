@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            /* background-color: #f0f0f0; */
+        }
+
+        .content {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            /* Center the content horizontally */
+            align-items: center;
+            /* Center vertically */
+            padding: 0px 0px 0px 100px;
+            min-height: 100vh;
+            background-color: white;
+            gap: 20px;
+            /* Reduce space between text and image */
+            text-align: left;
+        }
+
+        .text-section {
+            max-width: 40%;
+            /* Reduced width to make text closer to the image */
+            text-align: start;
+        }
+
+        .text-section h1 {
+            font-size: 3rem;
+            color: #002D72;
+            /* Dark blue for bold text */
+            margin: 0;
+            width: auto;
+        }
+
+        .text-section p {
+            font-size: 1.5rem;
+            color: #02214f;
+            margin-top: 20px;
+            width: auto;
+        }
+
+        .image-section img {
+            width: 800px;
+            /* Increased image size */
+            height: auto;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .text-section {
+                max-width: 100%;
+                text-align: center;
+                /* Center the text on smaller screens */
+            }
+
+            .image-section img {
+                width: 80%;
+                /* Adjust image width on smaller screens */
+                max-width: 500px;
+                margin-top: 20px;
+            }
+        }
+
+
+        .content2 {
+            background-color: #DEEBF8;
+            padding: 50px;
+            /* text-align: center; */
+            display: flex;
+            border-radius: 30px;
+            align-content: flex-start;
+            margin: 5%;
+
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content2 {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 20%;
+            margin-top: 60px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+   
+    <div class="content2">
+        <div>
+            <h1>Trade terms</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus ipsum molestias sunt at facilis
+                corrupti quia totam autem dolorem sint, possimus ex ut magni unde nam distinctio, cum quibusdam
+                repellat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, voluptate! Eius quae,
+                eum voluptatibus ullam quaerat enim minima veniam dolore laudantium, deserunt cumque dignissimos.
+                Mollitia rerum culpa provident sed nobis.
+
+        </div>
+        <div>
+            <button>learn more</button></p>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+.opinion-card {
+    background-color: rgb(28, 28, 102);
+    color: white;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.opinion-card1 {
+    background-color: rgb(28, 28, 102);
+    color: white;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.opinion-card, .opinion-card1 {
+    background-color: rgb(28, 28, 102);
+    color: white;
+    border-radius: 10px;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.opinion-card:hover, .opinion-card1:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.header {
+    background-color: rgb(136, 136, 159);
+    color: rgb(28, 28, 102);
+    border-radius: 10px;
+    height: 100%;
+    border-radius: 10px;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.header:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}

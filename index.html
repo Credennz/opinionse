@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ab Kamao Opinion Se</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/bs-brain@2.0.4/components/heroes/hero-3/assets/css/hero-3.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .container {
+        width: 100%;
+        margin: 0 auto;
+      }
+      .ncontainer {
+        /* padding-left: 241px;
+                      padding-right: 241px; */
+        width: 100%;
+        margin: 0 auto;
+      }
+      .nav {
+        background: linear-gradient(
+          to right,
+          #1e5799,
+          #2989d8,
+          #207cca,
+          #7db9e8
+        );
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        position: relative;
+        width: 100%;
+        height: 50px;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .menu5 {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        list-style: none;
+        justify-content: space-between;
+      }
+
+      .nav-link {
+        color: white;
+        font-size: 16px;
+        padding: 10px 20px;
+        text-decoration: none;
+      }
+      .nav-link.active {
+        background-color: #0a1f44;
+        border-radius: 25px;
+      }
+      @media (max-width: 1024px) {
+        .navbar-brand {
+          width: 58%;
+          left: 23%;
+        }
+        .ncontainer {
+          width: 60%;
+          left: 22%;
+        }
+      }
+
+      @media (max-width: 1350px) {
+        .col-12 {
+          flex: 0 0 auto;
+          width: 90%;
+        }
+      }
+      @media (max-width: 1200px) {
+        .navbar-brand {
+          width: 100px;
+          height: 48px;
+        }
+        .ncontainer {
+          width: 65%;
+          left: 19%;
+        }
+      }
+      @media (max-width: 768px) {
+        .navbar-brand {
+          width: 100px;
+          height: 48px;
+        }
+        .ncontainer {
+          padding-left: 10px;
+          padding-right: 10px;
+          width: 100%;
+          bottom: 5px;
+          top: 0; /* Ensure it sticks to the top in mobile */
+          position: fixed; /* Keep it fixed at the top */
+          z-index: 999; /* High z-index to ensure visibility */
+        }
+        .ncontainer.navbar-shown {
+          transform: translateY(0); /* Show navbar when scrolled up */
+        }
+        .nav {
+          width: 96%;
+          position: fixed;
+          bottom: 10px;
+          left: 2%;
+          right: 2%;
+          z-index: 999;
+        }
+        .menu5 {
+          flex-direction: row;
+        }
+        .nav-link.active {
+          background-size: cover;
+          background-color: #0a1f44;
+          border-radius: 25px;
+          height: 35px;
+        }
+        .nav-link {
+          color: white;
+          font-size: 14px;
+          justify-items: center;
+          padding: 10px 20px;
+          text-decoration: none;
+        }
+        .nav-link:focus,
+        .nav-link:hover {
+          color: #e7ebf0;
+        }
+      }
+      @media (max-width: 480px) {
+        .ncontainer {
+          padding-left: 10px;
+          padding-right: 10px;
+          width: 100%;
+          bottom: 5px;
+          top: 0; /* Ensure it sticks to the top in mobile */
+          position: fixed; /* Keep it fixed at the top */
+          z-index: 999; /* High z-index to ensure visibility */
+        }
+        .ncontainer.navbar-shown {
+          transform: translateY(0); /* Show navbar when scrolled up */
+        }
+        .nav {
+          width: 96%;
+          position: fixed;
+          bottom: 10px;
+          left: 2%;
+          right: 2%;
+          z-index: 999;
+        }
+        .menu5 {
+          flex-direction: row;
+        }
+        .nav-link {
+          padding: 10px;
+        }
+      }
+      .profile-icon {
+        width: 45px;
+        height: 45px;
+        background-color: #e0d7ff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .profile-icon i {
+        font-size: 30px;
+        color: #6b4eff;
+      }
+      .gradient-background {
+        background: linear-gradient(to bottom, #2c3e50, #fff);
+        height: 100vh; /* Adjust height as needed */
+      }
+      .hcontainer {
+        height: 80vh;
+        position: relative;
+        text-align: left;
+        padding: 100px;
+        background: linear-gradient(to bottom, #243c54, #fff);
+      }
+      .title {
+        font-size: 48px;
+        font-weight: bold;
+        color: #fff;
+      }
+      .subtitle {
+        font-size: 36px;
+        font-weight: bold;
+        color: #2c3e50;
+      }
+      .description {
+        font-size: 18px;
+        color: #2c3e50;
+        margin-top: 10px;
+      }
+      /* .btn-download {
+                      background-color: #007bff;
+                      color: #fff;
+                      font-size: 18px;
+                      padding: 10px 20px;
+                      border: none;
+                      border-radius: 5px;
+                      margin-top: 20px;
+                    } */
+      .checkbox {
+        margin-top: 10px;
+        color: #000000;
+      }
+      .image-container {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-5%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .image-container img {
+        max-width: 100%;
+        height: auto;
+      }
+      .speech-bubble {
+        position: absolute;
+        /* background-color: #fff; */
+        border-radius: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #2c3e50;
+        animation: fadeIn 2s ease-in-out;
+      }
+      .speech-bubble-yes {
+        background-color: #007bff;
+        color: #fff;
+        top: 250px;
+        text-align: center;
+        width: 208px;
+        font-weight: bolder;
+        font-size: x-large;
+        left: 50px;
+        animation: slideInUp 2s ease-in-out;
+      }
+
+      .speech-bubble-no {
+        background-color: #ff4d4d;
+        color: #fff;
+        top: 90px;
+        width: 30%;
+        /* position: absolute; */
+        text-align: center;
+        font-weight: bolder;
+        font-size: x-large;
+
+        right: 40px;
+        animation: slideInUp 2s ease-in-out;
+      }
+      .speech-bubble-tata {
+        position: absolute;
+        height: 90px;
+        width: 350px;
+        top: 151px;
+        left: 200px;
+        animation: fadeIn 2s ease-in-out;
+      }
+      .logo-1 {
+        /* height: 90px;
+                width: 350px; */
+        position: absolute;
+        opacity: 0.5;
+        top: 3%;
+        left: 29%;
+        animation: slideInUp 2s ease-in-out;
+      }
+
+      .logo-2 {
+        position: absolute;
+        opacity: 0.8;
+        top: 231px;
+        left: 564px;
+        animation: slideInUp 2s ease-in-out;
+      }
+      .logo-3 {
+        position: absolute;
+        opacity: 1.1;
+        top: 350px;
+        left: 25px;
+        animation: slideInUp 2s ease-in-out;
+      }
+      .phone-image {
+        top: 360px;
+        left: 70px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 650px;
+        z-index: 1;
+        height: auto;
+      }
+      .girl-image {
+        position: absolute;
+        top: 18px;
+        right: 200px;
+        width: 359px;
+        height: 500px;
+        z-index: 1;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes slideInUp {
+        from {
+          transform: translateY(100%);
+        }
+        to {
+          transform: translateY(0);
+        }
+      }
+      /* Responsive Design */
+      @media (max-width: 1350px) {
+        .girl-image {
+          position: absolute;
+          top: 18px;
+          right: 89px;
+          width: 359px;
+          height: 500px;
+          z-index: 1;
+        }
+        .phone-image {
+          top: 360px;
+          left: 70px;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 600px;
+          z-index: 1;
+          height: auto;
+        }
+      }
+      @media (max-width: 1200px) {
+        .hcontainer {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          height: 120vh;
+        }
+        .btnd {
+          justify-content: center;
+        }
+
+        /* Ensure tcontainer comes first */
+        .tcontainer {
+          order: 1;
+          width: 100%;
+        }
+
+        .image-container {
+          position: revert-layer;
+          order: 2;
+          width: 100%;
+          margin-top: 20px;
+        }
+
+        .phone-image {
+          width: 90%;
+          /* left: 50%;
+          transform: translateX(-50%);
+          top: 240px; */
+        }
+
+        .girl-image {
+          right: auto;
+          left: 53%;
+          transform: translateX(-50%);
+          /* top: 60px;
+          width: 250px; */
+          height: auto;
+        }
+
+        .speech-bubble-tata {
+          font-size: 14px;
+          /* top: 25%; */
+          left: 28%;
+          width: 51%;
+        }
+        .speech-bubble-yes {
+          left: 15%;
+          width: 25%;
+          /* top: 45%; */
+        }
+
+        .speech-bubble-no {
+          /* right: auto; */
+          left: 65%;
+          /* top: 100px;
+          transform: translateX(-50%); */
+        }
+        .logo-1 {
+          position: absolute;
+          opacity: 0.5;
+          /* top: 1px; */
+          left: 34%;
+          animation: slideInUp 2s ease-in-out;
+        }
+        .logo-2 {
+          position: absolute;
+          opacity: 0.8;
+          /* top: 42%; */
+          left: 82%;
+          animation: slideInUp 2s ease-in-out;
+        }
+        .logo-3 {
+          position: absolute;
+          opacity: 1.1;
+          /* top: 56%; */
+          left: 4%;
+          animation: slideInUp 2s ease-in-out;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .btn {
+          width: 150px;
+        }
+        .btnd {
+          justify-content: center;
+        }
+        .hcontainer {
+          padding: 30px;
+
+          height: 100vh;
+        }
+        .image-container {
+          position: revert-layer;
+          order: 2;
+          width: 100%;
+          /* height: 76%; */
+          margin-top: 20px;
+        }
+
+        /* .phone-image {
+          width: 76%;
+          top: 71%;
+        }
+        .girl-image {
+          width: 37%;
+          left: 50%;
+        } */
+
+        .speech-bubble-yes,
+        .speech-bubble-no,
+        .speech-bubble-tata {
+          font-size: 14px;
+        }
+
+        .phone-image {
+          width: 90%;
+          /* left: 50%;
+          transform: translateX(-50%);
+          top: 240px; */
+        }
+
+        .girl-image {
+          right: auto;
+          left: 53%;
+          transform: translateX(-50%);
+          /* top: 60px;
+          width: 250px; */
+          height: auto;
+        }
+
+        .speech-bubble-tata {
+          font-size: 14px;
+          /* top: 25%; */
+          left: 28%;
+          width: 51%;
+        }
+        .speech-bubble-yes {
+          left: 15%;
+          width: 25%;
+          /* top: 45%; */
+        }
+
+        .speech-bubble-no {
+          /* right: auto; */
+          left: 65%;
+          /* top: 100px;
+          transform: translateX(-50%); */
+        }
+        .logo-1 {
+          position: absolute;
+          opacity: 0.5;
+          top: 1px;
+          left: 34%;
+          animation: slideInUp 2s ease-in-out;
+        }
+        .logo-2 {
+          position: absolute;
+          opacity: 0.8;
+          /* top: 42%; */
+          left: 82%;
+          animation: slideInUp 2s ease-in-out;
+        }
+        .logo-3 {
+          position: absolute;
+          opacity: 1.1;
+          /* top: 56%; */
+          left: 4%;
+          animation: slideInUp 2s ease-in-out;
+        }
+      }
+      @media (max-width: 480px) {
+        .hcontainer {
+          padding: 20px;
+          height: 80vh;
+        }
+        .image-container {
+          margin: 25px;
+          height: 500px;
+        }
+
+        .phone-image {
+          top: 45%;
+          width: 87%;
+          left: 10%;
+        }
+
+        .girl-image {
+          width: 50%;
+        }
+
+        .speech-bubble-yes,
+        .speech-bubble-no,
+        .speech-bubble-tata {
+          font-size: 12px;
+        }
+        .speech-bubble-tata {
+          font-size: 14px;
+          top: 25%;
+          left: 25%;
+          width: 55%;
+        }
+        .speech-bubble-yes {
+          left: 22%;
+          top: 36%;
+          width: 27%;
+          transform: translateX(-50%);
+        }
+
+        .speech-bubble-no {
+          left: 81%;
+          top: 16%;
+          transform: translateX(-50%);
+        }
+        .logo-2 {
+          position: absolute;
+          opacity: 1.8;
+          top: 45%;
+          left: 1%;
+          height: -2px;
+          width: 16%;
+          animation: slideInUp 2s ease-in-out;
+        }
+        .logo-1 {
+          position: absolute;
+          opacity: 0.5;
+          width: 16%;
+          top: 6%;
+          left: 30%;
+          animation: slideInUp 2s ease-in-out;
+        }
+        .logo-3 {
+          position: absolute;
+          opacity: 0.8;
+          top: 34%;
+          left: 79%;
+          animation: slideInUp 2s ease-in-out;
+        }
+      }
+
+      /* vedio section */
+      .container {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-auto-rows: 100px 300px;
+        grid-gap: 10px;
+        grid-auto-flow: dense;
+      }
+
+      .gallery-item {
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+
+      .gallery-item .image {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .gallery-item .image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+        cursor: pointer;
+        transition: 0.5s ease-in-out;
+      }
+      .gallery-item:hover .image img {
+        transform: scale(1.5);
+      }
+
+      .gallery-item .text {
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-size: 25px;
+        pointer-events: none;
+        z-index: 4;
+        transition: 0.3s ease-in-out;
+        -webkit-backdrop-filter: blur(5px) saturate(1.8);
+        backdrop-filter: blur(5px) saturate(1.8);
+      }
+
+      .gallery-item:hover .text {
+        opacity: 1;
+        animation: move-down 0.3s linear;
+        padding: 1em;
+        width: 100%;
+      }
+
+      .w-1 {
+        grid-column: span 1;
+      }
+      .w-2 {
+        grid-column: span 2;
+      }
+      .w-3 {
+        grid-column: span 3;
+      }
+      .w-4 {
+        grid-column: span 4;
+      }
+      .w-5 {
+        grid-column: span 5;
+      }
+      .w-6 {
+        grid-column: span 6;
+      }
+
+      .h-1 {
+        grid-row: span 1;
+      }
+      .h-2 {
+        grid-row: span 2;
+      }
+      .h-3 {
+        grid-row: span 3;
+      }
+      .h-4 {
+        grid-row: span 4;
+      }
+      .h-5 {
+        grid-row: span 5;
+      }
+      .h-6 {
+        grid-row: span 6;
+      }
+
+      @media screen and (max-width: 500px) {
+        .container {
+          grid-template-columns: repeat(1, 1fr);
+        }
+        .w-1,
+        .w-2,
+        .w-3,
+        .w-4,
+        .w-5,
+        .w-6 {
+          grid-column: span 1;
+        }
+      }
+
+      @keyframes move-down {
+        0% {
+          top: 10%;
+        }
+        50% {
+          top: 35%;
+        }
+        100% {
+          top: 50%;
+        }
+      }
+      /* Custom non-clickable checkbox styles */
+      .form-check-input {
+        width: 20px;
+        height: 20px;
+        pointer-events: none; /* Disable clicking */
+        background-color: #02214f !important; /* Blue background */
+        border: none; /* Remove default border */
+      }
+
+      /* Ensure the checkmark inside the checkbox is visible */
+      .form-check-input:checked {
+        background-color: #02214f !important; /* Blue background for checked state */
+        border-color: #02214f !important;
+      }
+
+      /* Style for the checkmark (optional customization) */
+      .form-check-input:checked::after {
+        width: 0.8em;
+        height: 0.8em;
+        background-color: white;
+      }
+      .form-check-input:disabled {
+        pointer-events: none;
+        filter: none;
+        opacity: 1;
+      }
+      form-check-input:disabled ~ .form-check-label,
+      .form-check-input[disabled] ~ .form-check-label {
+        cursor: default;
+        opacity: 1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="d-inline-flex p-2">
+      <div class="">
+        <a class="navbar-brand" href="#"><img src="./img/logo.png" alt="" /></a>
+      </div>
+
+      <div
+        id="navbar_top"
+        class="ncontainer position-fixed d-flex flex-wrap justify-content-center"
+        style="z-index: 1"
+      >
+        <div class="row justify-content-center" style="width: 964px">
+          <div class="col-12">
+            <div class="nav">
+              <ul class="menu5" style="padding-left: 5px; padding-right: 5px">
+                <li class="nav-link">
+                  <a
+                    href="index.html"
+                    style="color: #fff; text-decoration: none"
+                    >Download</a
+                  >
+                </li>
+                <li class="nav-link">
+                  <a
+                    href="catagories.html"
+                    style="color: #fff; text-decoration: none"
+                    >Categories</a
+                  >
+                </li>
+                <li class="nav-link">
+                  <a
+                    href="career.html"
+                    style="color: #fff; text-decoration: none"
+                    >Careers</a
+                  >
+                </li>
+                <li class="nav-link">
+                  <a
+                    href="opinion.html"
+                    style="color: #fff; text-decoration: none"
+                    >Opinions</a
+                  >
+                </li>
+                <li class="nav-link">
+                  <a
+                    href="support.html"
+                    style="color: #fff; text-decoration: none"
+                    >Support</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="position-absolute end-0 d-inline-flex px-4">
+        <div class="d-inline-flex">
+          <div class="profile-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="36"
+              height="26"
+              fill="currentColor"
+              class="bi bi-person"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <button
+          class="navbar-toggler bg-white"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+          style="z-index: 1"
+        >
+          <div class="d-flex flex-column px-4">
+            <img src="./img/toogol_btn/Line 4.png" alt="" style="width: 25px" />
+            <img src="./img/toogol_btn/Line 5.png" alt="" style="width: 32px" />
+            <img src="./img/toogol_btn/Line 6.png" alt="" style="width: 25px" />
+          </div>
+        </button>
+        <div
+          class="offcanvas offcanvas-end text-bg-dark"
+          tabindex="-1"
+          id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+              Dark offcanvas
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hcontainer">
+      <div class="tcontainer" style="padding-top: 5%">
+        <h2 class="display-3 fw-bold mb-0" style="color: #f5efef">Ab Kamao</h2>
+        <h2 class="display-3 fw-bold mb-0" style="color: #02214f">
+          Opinion Se
+        </h2>
+        <p class="fs-4 mb-5">
+          Sports, Entertainment, Current Affairs and Many More
+        </p>
+        <div class="btnd d-grid gap-2 d-sm-flex">
+          <button
+            data-bs-toggle="modal"
+            data-bs-target="#downloadModal"
+            type="button"
+            class="btn bsb-btn-2xl rounded-pill"
+            style="background-color: #02214f; color: white;z-index: 1;"
+          >
+            Download Now
+          </button>
+        </div>
+        <div class="checkbox">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            id="blueCheckbox"
+            checked
+            disabled
+          />
+          <label class="form-check-label" for="blueCheckbox">
+            For 18+ Years Only
+          </label>
+          <!-- <input
+            checked=""
+            id="ageCheck"
+            type="checkbox"
+            disabled
+            style="background-color: #02214f"
+          />
+          <label for="ageCheck">For 18+ Years Only</label> -->
+        </div>
+      </div>
+      <div class="image-container">
+        <img
+          alt="A woman standing with a thoughtful expression, wearing a white sweatshirt with the word 'Opinion' on it."
+          class="girl-image"
+          src="./img/girl.logo.png"
+        />
+        <img
+          alt="A smartphone displaying a financial app with graphs and data"
+          class="phone-image"
+          src="./img/hero-thumb-4.33409573.png 1 (1).png"
+        />
+        <div class="speech-bubble speech-bubble-yes">Yes $4.00</div>
+        <div class="speech-bubble speech-bubble-no">No $6.00</div>
+        <div class="speech-bubble-tata">
+          <img src="./img/Group 727 1.png" alt="" />
+        </div>
+
+        <div class="logo-1">
+          <img src="./img/Group 728 3 (1).png" alt="" />
+        </div>
+        <div class="logo-2">
+          <img src="./img/Group 728 1 (2).png" alt="" />
+        </div>
+        <div class="logo-3">
+          <img src="./img/Group 728 3 (2).png" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="youtube section" style="text-align: center">
+      <h1 style="color: #02214f; font-size: bold; font-weight: 800">
+        Trade Your<br />
+        Point Of View
+      </h1>
+      <p style="color: #02214f; margin-top: 1rem; margin-bottom: 6rem">
+        Quia cupiditate placeat exercitationem voluptatem.<br />
+        Fugit rem repellendus officia amet blanditiis incidunt quam.<br />
+        Voluptate consectetur odio vel sapiente vero
+      </p>
+
+      <div class="maincotainer">
+        <div class="container">
+          <div class="gallery-container w-2 h-1">
+            <div class="gallery-item">
+              <div class="image">
+                <img
+                  src="https://d3g5ywftkpzr0e.cloudfront.net/wp-content/uploads/2023/07/13220529/Artificial-Intelligence-in-Indonesia-The-current-state-and-its-opportunities.jpeg"
+                  alt="AI"
+                />
+              </div>
+              <div class="text">AI</div>
+            </div>
+          </div>
+
+          <div class="gallery-container bg-light w-3 h-1">
+            <div class="gallery-item">
+              <div class="image">
+                <img
+                  src="https://www.europarl.europa.eu/resources/library/images/20230607PHT95601/20230607PHT95601_original.jpg"
+                  alt="people"
+                />
+              </div>
+              <div class="text">AI People</div>
+            </div>
+          </div>
+
+          <div class="gallery-container bg-black h-1">
+            <div class="gallery-item">
+              <div class="image">
+                <img
+                  src="https://online.hbs.edu/Style%20Library/api/resize.aspx?imgpath=/PublishingImages/blog/posts/digital-marketing-skills.jpg&w=1200&h=630"
+                  alt="sport"
+                />
+              </div>
+              <div class="text">Digital marketing</div>
+            </div>
+          </div>
+
+          <div class="gallery-container bg-black h-1 w-2">
+            <div class="gallery-item">
+              <div class="image">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGWI8T-82pMBTM5B9lrq870qa27G0dMil_AQ&s"
+                  alt="fitness"
+                />
+              </div>
+              <div class="text">APp dev</div>
+            </div>
+          </div>
+
+          <div class="gallery-container bg-warning w-2 h-1">
+            <div class="gallery-item">
+              <div class="image">
+                <img
+                  src="https://www.dreamscapemarketing.com/wp-content/uploads/2023/03/Benefits-to-Working-with-a-Digital-Marketing-Agency-1024x683.jpg"
+                  alt="food"
+                />
+              </div>
+              <div class="text">Web dev</div>
+            </div>
+          </div>
+          <div class="gallery-container bg-secondary w-2 h-1">
+            <div class="gallery-item">
+              <div class="image">
+                <img
+                  src="https://forkast.news/wp-content/uploads/2022/07/kanchanara-9BDBjEl_fDA-unsplash-1260x838.jpg"
+                  alt="food"
+                />
+              </div>
+              <div class="text">Service</div>
+            </div>
+          </div>
+          <div class="gallery-container bg-secondary w-2 h-1">
+            <div class="gallery-item">
+              <div class="image">
+                <img
+                  src="https://xtb.scdn5.secure.raxcdn.com/kb_main_photo/0102/92/9ecbe35a-70bc-4b2e-80aa-74c65b57e09f/kb_main_photo_front/1-trading-what-is-it.png"
+                  alt="food"
+                />
+              </div>
+              <div class="text">Service</div>
+            </div>
+          </div>
+          <div class="gallery-container bg-info w-4 h-1">
+            <div class="gallery-item">
+              <div class="image">
+                <img
+                  src="https://www.imf.org/-/media/Images/IMF/Blog/Articles/Hero/2023/June/BLOG-2099x600-FAD-Crypto-taxation-Da-kuk-iStock-by-Getty-Images-iStock-1304093999.ashx"
+                  alt="food"
+                />
+              </div>
+              <div class="text">crypto</div>
+            </div>
+          </div>
+          <div class="mcontainer">
+            <style>
+              .mcontainer {
+                position: absolute; /* Add this */
+                top: 50%; /* Add this */
+                left: 50%; /* Add this */
+                transform: translate(-50%, -50%);
+                /* z-index: 5; */
+
+                width: 80%; /* Adjust width as needed */
+                height: 80%; /* Adjust height as needed */
+                margin: 0 auto; /* Center the container */
+                max-width: 700px; /* Set a maximum width */
+                max-height: 350px; /* Set a maximum height */
+              }
+              .mcontainer img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* Adjust object-fit as needed */
+              }
+
+              .mcontainer iframe {
+                position: absolute;
+                top: 7px;
+                left: 6px;
+                width: 98%;
+                height: 96%;
+                object-fit: cover;
+                border-radius: 54px;
+              }
+              @media (max-width: 768px) {
+                .mcontainer img {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover; /* Adjust object-fit as needed */
+                }
+
+                .mcontainer iframe {
+                  position: absolute;
+                  top: 7px;
+                  left: 6px;
+                  width: 98%;
+                  height: 96%;
+                  object-fit: cover;
+                  border-radius: 54px;
+                }
+              }
+
+              /* @media (max-width: 480px) {
+                .mcontainer img {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  height: auto;
+                  width: 99%;
+                  object-fit: cover; 
+                }
+
+                .mcontainer iframe {
+                  position: absolute;
+                  top: 2px;
+                  left: 5px;
+                  height: auto;
+                 
+                  height: 5;
+                  object-fit: cover;
+                  border-radius: 11px;
+                }
+              } */
+            </style>
+            <img
+              src="./img/i-phone-removebg-preview.png"
+              alt="PNG Image"
+              class="png-image"
+            />
+            <!-- <iframe
+            src="https://www.youtube.com/embed/roz9sXFkTuE?si=1SUPv8EdebNIk0VM"
+          >
+          </iframe> -->
+            <iframe
+              src="https://www.youtube.com/embed/1-nnEM8chwo?si=rtfpNqy7bfoZfkmh&amp;start=59"
+              title="YouTube video player"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      #iframe1,
+      #iframe2,
+      #iframe3,
+      #iframe4 {
+        width: 100%; /* Full width for all iframes */
+        border: none;
+      }
+
+      /* Specific height for each iframe on desktop */
+      #iframe1 {
+        height: 850px;
+      }
+      #iframe2 {
+        height: 600px;
+      }
+      #iframe3 {
+        height: 800px;
+      }
+      #iframe4 {
+        height: 600px;
+      }
+      @media screen and (max-width: 480px) {
+        #iframe1 {
+          height: 700px; /* Adjusted height for mobile */
+        }
+        #iframe2 {
+          height: 1024px; /* Adjusted height for mobile */
+        }
+        #iframe3 {
+          height: 700px; /* Adjusted height for mobile */
+        }
+        #iframe4 {
+          height: 750px; /* Adjusted height for mobile */
+        }
+      }
+      @media screen and (max-width: 680px) {
+        #iframe1 {
+          height: 700px; /* Adjusted height for mobile */
+        }
+        #iframe2 {
+          height: 1024px; /* Adjusted height for mobile */
+        }
+        #iframe3 {
+          height: 700px; /* Adjusted height for mobile */
+        }
+        #iframe4 {
+          height: 750px; /* Adjusted height for mobile */
+        }
+      }
+    </style>
+
+    <!-- Iframes -->
+    <iframe src="iphone.html" id="iframe1" scrolling="no"></iframe>
+    <iframe src="index1.html" id="iframe2" scrolling="no"></iframe>
+    <iframe src="card.html" id="iframe3" scrolling="no"></iframe>
+    <iframe src="index2.html" id="iframe4" scrolling="no"></iframe>
+
+    <!-- JavaScript for dynamically adjusting the height of each iframe -->
+
+    <script>
+      // Get the iframe element
+      const iframe = document.querySelector("iframe");
+
+      // Create a play button
+      const playButton = document.createElement("button");
+
+      playButton.style.position = "absolute";
+      playButton.style.top = "50%";
+      playButton.style.left = "50%";
+      playButton.style.transform = "translate(-50%, -50%)";
+      playButton.style.zIndex = "10";
+      playButton.style.background = "none";
+      playButton.style.border = "none";
+      playButton.style.cursor = "pointer";
+
+      // Add the play button to the iframe
+      iframe.parentNode.appendChild(playButton);
+
+      // Add an event listener to the play button
+      playButton.addEventListener("click", () => {
+        // Remove the play button
+        playButton.remove();
+
+        // Play the video
+        iframe.src = iframe.src.replace("autoplay=0", "autoplay=1");
+
+        // Create a pause button
+        const pauseButton = document.createElement("button");
+        pauseButton.textContent = "Pause";
+        pauseButton.style.position = "absolute";
+        pauseButton.style.top = "50%";
+        pauseButton.style.left = "50%";
+        pauseButton.style.transform = "translate(-50%, -50%)";
+        pauseButton.style.zIndex = "10";
+        pauseButton.style.background = "none";
+        pauseButton.style.border = "none";
+        pauseButton.style.cursor = "pointer";
+
+        // Add the pause button to the iframe
+        iframe.parentNode.appendChild(pauseButton);
+
+        // Add an event listener to the pause button
+        pauseButton.addEventListener("click", () => {
+          // Remove the pause button
+          pauseButton.remove();
+
+          // Pause the video
+          iframe.src = iframe.src.replace("autoplay=1", "autoplay=0");
+
+          // Create a play button again
+          const newPlayButton = document.createElement("button");
+          newPlayButton.textContent = "Play";
+          newPlayButton.style.position = "absolute";
+          newPlayButton.style.top = "50%";
+          newPlayButton.style.left = "50%";
+          newPlayButton.style.transform = "translate(-50%, -50%)";
+          newPlayButton.style.zIndex = "10";
+          newPlayButton.style.background = "none";
+          newPlayButton.style.border = "none";
+          newPlayButton.style.cursor = "pointer";
+
+          // Add the new play button to the iframe
+          iframe.parentNode.appendChild(newPlayButton);
+
+          // Add an event listener to the new play button
+          newPlayButton.addEventListener("click", () => {
+            // Remove the new play button
+            newPlayButton.remove();
+
+            // Play the video
+            iframe.src = iframe.src.replace("autoplay=0", "autoplay=1");
+          });
+        });
+      });
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get all nav links
+        var links = document.querySelectorAll(".nav-link");
+
+        // Get current page URL path
+        var currentPath = window.location.pathname;
+
+        // Loop through each link
+        links.forEach(function (link) {
+          var linkPath = link.querySelector("a").getAttribute("href");
+
+          // Check if the current page matches the link's href
+          if (currentPath.includes(linkPath)) {
+            // If match, add 'active' class to this link
+            link.classList.add("active");
+          } else {
+            // Remove 'active' class from non-matching links
+            link.classList.remove("active");
+          }
+        });
+      });
+    </script>
+
+    <!-- Modal -->
+
+    <style>
+      .modal-content {
+        border-radius: 15px;
+        padding: 20px;
+      }
+
+      .modal-header {
+        border-bottom: none;
+      }
+      /* .mimage-container {
+        top: -33px;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        height: 635px;
+        left: 57px;
+      } */
+
+      .modal-body img {
+        max-width: 200px;
+      }
+
+      .modal-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      @media (max-width: 768px) {
+        .modal-dialog {
+          max-width: 90%;
+          margin: 10px;
+        }
+
+        .modal-title {
+          font-size: 1.25rem;
+        }
+
+        .modal-body img.qr-code {
+          max-width: 150px;
+        }
+
+        .btn-outline-success,
+        .btn-outline-primary {
+          font-size: 0.9rem;
+          padding: 8px 15px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .modal-dialog {
+          max-width: 95%;
+          margin: 10px;
+        }
+
+        .modal-title {
+          font-size: 1rem;
+        }
+
+        .modal-body img.qr-code {
+          max-width: 120px;
+        }
+
+        .btn-outline-success,
+        .btn-outline-primary {
+          font-size: 0.85rem;
+          padding: 7px 12px;
+        }
+      }
+      .btn-outline-success,
+      .btn-outline-primary {
+        padding: 10px 20px;
+        border-radius: 50px;
+      }
+    </style>
+    <div
+      class="modal fade"
+      id="downloadModal"
+      tabindex="-1"
+      aria-labelledby="downloadModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="downloadModalLabel">
+              We are excited to get you onboard!
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center">
+            <img
+              src="https://qrcodedynamic.com/themes/altum/assets/images/qr_code.svg"
+              alt="QR Code"
+              class="img-fluid mb-3"
+            />
+            <div class="d-flex justify-content-center gap-3">
+              <a href="#" class="btn btn-outline-success">
+                <i class="bi bi-android2"></i> Android
+              </a>
+              <a href="#" class="btn btn-outline-primary">
+                <i class="bi bi-apple"></i> App Store
+              </a>
+            </div>
+            <p class="mt-3">
+              You can scan the QR code from Paytm or any QR Scanner app.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var myModal = new bootstrap.Modal(
+          document.getElementById("downloadModal"),
+          {}
+        );
+        var buttons = document.querySelectorAll(".download-btn");
+        buttons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            myModal.show();
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive App Promo</title>
+    <style>
+      :root {
+        --blue-50: rgba(0, 102, 204, 0.13);
+        --blue-900: rgb(28, 28, 102);
+        --white: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #fff;
+        color: var(--blue-900);
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      .grid {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      }
+
+      .card {
+        background-color: var(--blue-900);
+        color: var(--white);
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      }
+
+      .card-blue-light {
+        background-color: var(--blue-50);
+        color: var(--blue-900);
+      }
+
+      .card h1 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin-bottom: 1rem;
+      }
+
+      .card h2 {
+        font-size: clamp(1.2rem, 3vw, 1.5rem);
+        margin-bottom: 0.75rem;
+      }
+
+      .card p {
+        font-size: 1rem;
+      }
+
+      .icon {
+        width: 24px;
+        height: 24px;
+        fill: currentColor;
+        margin-top: auto;
+      }
+
+      @media (min-width: 768px) {
+        .grid-3-cols {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .grid-2-cols {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="grid grid-3-cols">
+        <div class="card card-blue-light">
+          <h1>
+            We Care <br />For Your<br />
+            Opinions
+          </h1>
+          <svg
+            class="icon"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 12h14m-6-6l6 6-6 6"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              fill="none"
+            />
+          </svg>
+        </div>
+        <div class="card">
+          <h2>Your Feedback Counts</h2>
+          <p>
+            Every opinion helps us to provide better service. Your input shapes
+            our growth.
+          </p>
+        </div>
+        <div class="card">
+          <h2>Let Us Know</h2>
+          <p>
+            We're here to listen! Let us know how we can make your experience
+            better.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-2-cols" style="margin-top: 1.5rem">
+        <div class="card">
+          <h2>Help Us Improve</h2>
+          <p>
+            We value your input and are committed to continuous improvement.
+            Your feedback helps us refine our services and create a better
+            experience for all our users.
+          </p>
+        </div>
+        <div class="card">
+          <h2>Let Us Know</h2>
+          <p>
+            We're here to listen! Let us know how we can make your experience
+            better.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

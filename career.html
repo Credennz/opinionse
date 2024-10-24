@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ab Kamao Opinion Se</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/bs-brain@2.0.4/components/heroes/hero-3/assets/css/hero-3.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .container {
+        width: 100%;
+        margin: 0 auto;
+      }
+      .ncontainer {
+        /* padding-left: 241px;
+                      padding-right: 241px; */
+        width: 100%;
+        margin: 0 auto;
+      }
+      .nav {
+        background: linear-gradient(
+          to right,
+          #1e5799,
+          #2989d8,
+          #207cca,
+          #7db9e8
+        );
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        position: relative;
+        width: 100%;
+        height: 50px;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .menu5 {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        list-style: none;
+        justify-content: space-between;
+      }
+
+      .nav-link {
+        color: white;
+        font-size: 16px;
+        padding: 10px 20px;
+        text-decoration: none;
+      }
+      .nav-link.active {
+        background-color: #0a1f44;
+        border-radius: 25px;
+      }
+      @media (max-width: 1024px) {
+        .navbar-brand {
+          width: 58%;
+          left: 23%;
+        }
+        .ncontainer {
+          width: 60%;
+          left: 22%;
+        }
+      }
+
+      @media (max-width: 1350px) {
+        .col-12 {
+          flex: 0 0 auto;
+          width: 90%;
+        }
+      }
+      @media (max-width: 1200px) {
+        .navbar-brand {
+          width: 100px;
+          height: 48px;
+        }
+        .ncontainer {
+          width: 65%;
+          left: 19%;
+        }
+      }
+      @media (max-width: 768px) {
+        .navbar-brand {
+          width: 100px;
+          height: 48px;
+        }
+        .ncontainer {
+          padding-left: 10px;
+          padding-right: 10px;
+          width: 100%;
+          bottom: 5px;
+          top: 0; /* Ensure it sticks to the top in mobile */
+          position: fixed; /* Keep it fixed at the top */
+          z-index: 999; /* High z-index to ensure visibility */
+        }
+        .ncontainer.navbar-shown {
+          transform: translateY(0); /* Show navbar when scrolled up */
+        }
+        .nav {
+          width: 96%;
+          position: fixed;
+          bottom: 10px;
+          left: 2%;
+          right: 2%;
+          z-index: 999;
+        }
+        .menu5 {
+          flex-direction: row;
+        }
+        .nav-link.active {
+          background-size: cover;
+          background-color: #0a1f44;
+          border-radius: 25px;
+          height: 35px;
+        }
+        .nav-link {
+          color: white;
+          font-size: 14px;
+          justify-items: center;
+          padding: 10px 20px;
+          text-decoration: none;
+        }
+        .nav-link:focus,
+        .nav-link:hover {
+          color: #e7ebf0;
+        }
+      }
+      @media (max-width: 480px) {
+        .ncontainer {
+          padding-left: 10px;
+          padding-right: 10px;
+          width: 100%;
+          bottom: 5px;
+          top: 0; /* Ensure it sticks to the top in mobile */
+          position: fixed; /* Keep it fixed at the top */
+          z-index: 999; /* High z-index to ensure visibility */
+        }
+        .ncontainer.navbar-shown {
+          transform: translateY(0); /* Show navbar when scrolled up */
+        }
+        .nav {
+          width: 96%;
+          position: fixed;
+          bottom: 10px;
+          left: 2%;
+          right: 2%;
+          z-index: 999;
+        }
+        .menu5 {
+          flex-direction: row;
+        }
+        .nav-link {
+          padding: 10px;
+        }
+      }
+      .profile-icon {
+        width: 45px;
+        height: 45px;
+        background-color: #e0d7ff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .profile-icon i {
+        font-size: 30px;
+        color: #6b4eff;
+      }
+      .gradient-background {
+        background: linear-gradient(to bottom, #2c3e50, #fff);
+        height: 100vh; /* Adjust height as needed */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="d-inline-flex p-2">
+      <div class="">
+        <a class="navbar-brand" href="#"><img src="./img/logo.png" alt="" /></a>
+      </div>
+
+      <div
+        id="navbar_top"
+        class="ncontainer position-fixed d-flex flex-wrap justify-content-center"
+        style="z-index: 1"
+      >
+        <div class="row justify-content-center" style="width: 964px">
+          <div class="col-12">
+            <div class="nav">
+              <ul class="menu5" style="padding-left: 5px; padding-right: 5px">
+                <li class="nav-link">
+                  <a
+                    href="index.html"
+                    style="color: #fff; text-decoration: none"
+                    >Download</a
+                  >
+                </li>
+                <li class="nav-link">
+                  <a
+                    href="catagories.html"
+                    style="color: #fff; text-decoration: none"
+                    >Categories</a
+                  >
+                </li>
+                <li class="nav-link">
+                  <a
+                    href="career.html"
+                    style="color: #fff; text-decoration: none"
+                    >Careers</a
+                  >
+                </li>
+                <li class="nav-link">
+                  <a
+                    href="opinion.html"
+                    style="color: #fff; text-decoration: none"
+                    >Opinions</a
+                  >
+                </li>
+                <li class="nav-link">
+                  <a
+                    href="support.html"
+                    style="color: #fff; text-decoration: none"
+                    >Support</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="position-absolute end-0 d-inline-flex px-4">
+        <div class="d-inline-flex">
+          <div class="profile-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="36"
+              height="26"
+              fill="currentColor"
+              class="bi bi-person"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <button
+          class="navbar-toggler bg-white"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+          style="z-index: 1"
+        >
+          <div class="d-flex flex-column px-4">
+            <img src="./img/toogol_btn/Line 4.png" alt="" style="width: 25px" />
+            <img src="./img/toogol_btn/Line 5.png" alt="" style="width: 32px" />
+            <img src="./img/toogol_btn/Line 6.png" alt="" style="width: 25px" />
+          </div>
+        </button>
+        <div
+          class="offcanvas offcanvas-end text-bg-dark"
+          tabindex="-1"
+          id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+              Dark offcanvas
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      #iframe1,
+      #iframe2,
+      #iframe3,
+      #iframe4 {
+        width: 100%; /* Full width for all iframes */
+        border: none;
+      }
+
+      /* Specific height for each iframe on desktop */
+      #iframe1 {
+        height: 350px;
+      }
+      #iframe2 {
+        height: 700px;
+      }
+      #iframe3 {
+        height: 500px;
+      }
+      #iframe4 {
+        height: 600px;
+      }
+      @media screen and (max-width: 480px) {
+        #iframe1 {
+          height: 300px;
+        }
+        #iframe2 {
+          height: 400px; /* Adjusted height for mobile */
+        }
+        #iframe3 {
+          height: 500px; /* Adjusted height for mobile */
+        }
+        #iframe4 {
+          height: 750px; /* Adjusted height for mobile */
+        }
+      }
+      @media screen and (max-width: 680px) {
+        #iframe1 {
+          height: 300px; /* Adjusted height for mobile */
+        }
+        #iframe2 {
+          height: 400px; /* Adjusted height for mobile */
+        }
+        #iframe3 {
+          height: 400px; /* Adjusted height for mobile */
+        }
+        #iframe4 {
+          height: 750px; /* Adjusted height for mobile */
+        }
+      }
+    </style>
+    <!-- Iframes -->
+    <iframe src="page1.html" id="iframe1" scrolling="no"></iframe>
+    <iframe src="t1.html" id="iframe2" scrolling="no"></iframe>
+
+    <style>
+      .container {
+        width: 100%;
+        margin: 90px auto;
+      }
+      .custom-card {
+        background-color: #e0f0ff;
+        border-radius: 20px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+      @media (min-width: 768px) {
+        .custom-card {
+          flex-direction: row;
+          align-items: center;
+        }
+      }
+      .custom-card h1 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #1a2e4f;
+      }
+      .custom-card p {
+        font-size: 1rem;
+        color: #1a2e4f;
+      }
+      .custom-button {
+        background-color: #1a2e4f;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 1rem;
+        margin-top: 20px;
+      }
+      @media (min-width: 768px) {
+        .custom-button {
+          margin-top: 0;
+        }
+      }
+      @media (min-width: 768px) {
+        .container {
+          width: 100%;
+          margin: 34px auto;
+        }
+      }
+    </style>
+    <div class="container">
+      <div class="custom-card">
+        <div>
+          <h1>Lorem Ipsum</h1>
+          <p>
+            Quia cupiditate placeat exercitationem voluptatem. Fugit rem
+            repellendus officia amet blanditiis incidunt quam. Voluptate
+            consectetur odio vel sapiente vero
+          </p>
+        </div>
+        <button class="custom-button">Lorem Ipsum</button>
+      </div>
+    </div>
+
+    <iframe src="index3.html" id="iframe4" scrolling="no"></iframe>
+    <!-- //navbar -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get all nav links
+        var links = document.querySelectorAll(".nav-link");
+
+        // Get current page URL path
+        var currentPath = window.location.pathname;
+
+        // Loop through each link
+        links.forEach(function (link) {
+          var linkPath = link.querySelector("a").getAttribute("href");
+
+          // Check if the current page matches the link's href
+          if (currentPath.includes(linkPath)) {
+            // If match, add 'active' class to this link
+            link.classList.add("active");
+          } else {
+            // Remove 'active' class from non-matching links
+            link.classList.remove("active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opinions Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: auto;
+        padding: 20px;
+        text-align: center;
+      }
+
+      h2 {
+        color: #2670c4;
+        margin-top: 40px;
+      }
+
+      .sub-heading {
+        color: #0d31d4;
+        font-size: 1.2em;
+        margin-bottom: 30px;
+      }
+
+      /* FAQ Section */
+      .faq-section {
+        margin: 0 auto;
+        padding: 50px 20px;
+        max-width: 800px;
+      }
+
+      .faq-section h2 {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 30px;
+        color: #1a4c89;
+      }
+
+      .faq-item {
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        background-color: #e4f0ff;
+      }
+
+      .faq-question {
+        width: 100%;
+        background-color: #e4f0ff;
+        border: none;
+        padding: 20px;
+        font-size: 18px;
+        text-align: left;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #223366;
+        border-radius: 10px;
+        transition: background-color 0.3s ease;
+      }
+
+      .faq-question:hover {
+        background-color: #d0e0f0;
+      }
+
+      .faq-answer {
+        display: none;
+        padding: 20px;
+        font-size: 16px;
+        color: #444;
+        background-color: white;
+        border-radius: 0 0 10px 10px;
+      }
+
+      .faq-question.active + .faq-answer {
+        display: block;
+      }
+
+      .arrow {
+        font-size: 18px;
+        transition: transform 0.3s ease;
+      }
+
+      .faq-question.active .arrow {
+        transform: rotate(180deg);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .faq-section {
+          padding: 20px;
+        }
+
+        .faq-question {
+          font-size: 16px;
+          padding: 15px;
+        }
+
+        .faq-answer {
+          font-size: 14px;
+          padding: 15px;
+        }
+
+        .faq-section h2 {
+          font-size: 22px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .faq-section {
+          padding: 15px;
+        }
+
+        .faq-question {
+          font-size: 14px;
+          padding: 10px;
+        }
+
+        .faq-answer {
+          font-size: 12px;
+          padding: 10px;
+        }
+
+        .faq-section h2 {
+          font-size: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <button class="faq-question active">
+          Q1: Demo Question? <span class="arrow">&#x25BC;</span>
+        </button>
+        <div class="faq-answer" style="display: block">
+          <p>
+            Quia cupiditate placeat exercitationem voluptatem. Fugit rem
+            repellendus officia amet blanditiis incidunt quam. Voluptate
+            consectetur odio vel sapiente vero exercitationem voluptatem.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Q2: Demo Question? <span class="arrow">&#x25BC;</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Fugit rem repellendus officia amet blanditiis incidunt quam.
+            Voluptate consectetur odio vel sapiente vero exercitationem
+            voluptatem.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Q3: Demo Question? <span class="arrow">&#x25BC;</span>
+        </button>
+        <div class="faq-answer">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat,
+            quaerat veritatis? Sit iure modi eius molestias praesentium veniam
+            corporis consectetur labore autem, qui dolores vitae, explicabo et,
+            non cupiditate. Tenetur!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const faqItems = document.querySelectorAll(".faq-question");
+
+      faqItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          // Close all answers
+          faqItems.forEach((otherItem) => {
+            if (otherItem !== item) {
+              otherItem.classList.remove("active");
+              otherItem.nextElementSibling.style.display = "none";
+            }
+          });
+
+          // Toggle the clicked item
+          item.classList.toggle("active");
+          const answer = item.nextElementSibling;
+          if (item.classList.contains("active")) {
+            answer.style.display = "block";
+          } else {
+            answer.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
