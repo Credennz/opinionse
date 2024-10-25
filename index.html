@@ -110,7 +110,7 @@
           padding-right: 10px;
           width: 100%;
           bottom: 5px;
-          top: 0; /* Ensure it sticks to the top in mobile */
+
           position: fixed; /* Keep it fixed at the top */
           z-index: 999; /* High z-index to ensure visibility */
         }
@@ -152,7 +152,7 @@
           padding-right: 10px;
           width: 100%;
           bottom: 5px;
-          top: 0; /* Ensure it sticks to the top in mobile */
+          /* Ensure it sticks to the top in mobile */
           position: fixed; /* Keep it fixed at the top */
           z-index: 999; /* High z-index to ensure visibility */
         }
@@ -192,7 +192,7 @@
         height: 100vh; /* Adjust height as needed */
       }
       .hcontainer {
-        height: 80vh;
+        /* height: 80vh; */
         position: relative;
         text-align: left;
         padding: 100px;
@@ -308,7 +308,7 @@
         animation: slideInUp 2s ease-in-out;
       }
       .phone-image {
-        top: 360px;
+        top: 35px;
         left: 70px;
         position: absolute;
         bottom: 0;
@@ -352,12 +352,12 @@
           z-index: 1;
         }
         .phone-image {
-          top: 360px;
-          left: 70px;
+          top: 38px;
+          left: 85px;
           position: absolute;
           bottom: 0;
           right: 0;
-          width: 600px;
+          width: 535px;
           z-index: 1;
           height: auto;
         }
@@ -479,10 +479,21 @@
         }
 
         .phone-image {
-          width: 90%;
-          /* left: 50%;
-          transform: translateX(-50%);
-          top: 240px; */
+          top: 16%;
+          width: 84%;
+        }
+
+        @media (max-width: 1024px) {
+          .hcontainer {
+            text-align: center;
+            height: 102vh;
+          }
+        }
+        @media (max-width: 360px) {
+          .hcontainer {
+            text-align: center;
+            height: 100%;
+          }
         }
 
         .girl-image {
@@ -545,9 +556,9 @@
         }
 
         .phone-image {
-          top: 45%;
-          width: 87%;
-          left: 10%;
+          top: 15%;
+          width: 75%;
+          left: 16%;
         }
 
         .girl-image {
@@ -880,7 +891,7 @@
             data-bs-target="#downloadModal"
             type="button"
             class="btn bsb-btn-2xl rounded-pill"
-            style="background-color: #02214f; color: white;z-index: 1;"
+            style="background-color: #02214f; color: white; z-index: 1"
           >
             Download Now
           </button>
@@ -907,15 +918,15 @@
         </div>
       </div>
       <div class="image-container">
-        <img
+        <!-- <img
           alt="A woman standing with a thoughtful expression, wearing a white sweatshirt with the word 'Opinion' on it."
           class="girl-image"
           src="./img/girl.logo.png"
-        />
+        /> -->
         <img
           alt="A smartphone displaying a financial app with graphs and data"
           class="phone-image"
-          src="./img/hero-thumb-4.33409573.png 1 (1).png"
+          src="./img/girlphone1.png"
         />
         <div class="speech-bubble speech-bubble-yes">Yes $4.00</div>
         <div class="speech-bubble speech-bubble-no">No $6.00</div>
